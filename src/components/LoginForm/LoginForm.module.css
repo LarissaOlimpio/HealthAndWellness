@@ -1,0 +1,23 @@
+.background {
+  background-image: url("../../assets/background.jpg");
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  z-index: -1;
+  width: 100vw;
+  min-height: 100vh;
+  object-fit: cover;
+  background-repeat: no-repeat;
+}
+.login{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.login button{
+  width: 150px;
+  height: 30px;
+  margin:1rem 0 1rem 0;
+  border-radius: 10px;
+}
