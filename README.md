@@ -9,21 +9,21 @@ Health and well-being in your hands, the idea is a Web platform to help in the c
 
 | :placard: Health And Wellness |     |
 | -------------  | --- |
-|:label: Tecnologias | React and TypeScript |
+|:label: Technologies| React and TypeScript |
 | :rocket: URL         | https://health-and-wellness-flame.vercel.app/
 
 
 ![calculator](https://github.com/LarissaOlimpio/HealthAndWellness/assets/50180854/180fc301-29e8-415e-9ea2-83b6385599ad#vitrinedev)
 
 
-### Como rodar o projeto:
+### How to run the Project :
 
-**Você pode clonar o projeto e rodá-lo localmente seguindo os passos abaixo**
+**You can clone the project and run it locally by following the steps below**
 
-1. `git clone https://github.com/LarissaOlimpio/TheLastOfUs.git` para clonar o projeto
-2. `yarn` ou `npm install` para instalar as dependências do projeto
-3. `yarn start` ou `npm start` para rodar o projeto
-4. Acessar [http://localhost:3000](http://localhost:3000) no navegador
+1. `git clone https://github.com/LarissaOlimpio/TheLastOfUs.git` for cloning the project
+2. `yarn` ou `npm install` to install the dependency of the project
+3. `yarn start` or `npm start` to execute the project
+4. Access [http://localhost:3000](http://localhost:3000) in the browser
 
 
-**Projeto criado com Vite, para saber mais acesse a documentação: https://vitejs.dev/**
+**Project create with Vite, to learn more access the documentation: https://vitejs.dev/**
