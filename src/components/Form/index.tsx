@@ -1,6 +1,7 @@
 import { IFormData } from "../../interfaces/IFormData";
 import { useState } from 'react';
 import styles from "./Form.module.css";
+import { Button } from "../Button";
 
 
 export function Form() {
@@ -32,29 +33,29 @@ export function Form() {
  }
   return (
     <form className={styles.form} onSubmit={handleSubmit}>
-      <h2>Bem vindo, antes de começar precisamos de alguns dados:</h2>
+      <h2>Bem vindo, antes de começar preencha os campos abaixo:</h2>
 
       <label htmlFor="name">Nome:</label>
-      <input id="name" type="text" onChange={handleInputChange}/>
+      <input id="name" type="text" autoComplete="off" required onChange={handleInputChange}/>
 
       <label htmlFor="age">Idade:</label>
-      <input id="age" type="text" onChange={handleInputChange} />
+      <input id="age" type="number"autoComplete="off" required min={0} max={80} onChange={handleInputChange} />
 
-      <label htmlFor="weight">Peso:</label>
-      <input id="weight" type="text" onChange={handleInputChange} />
+      <label htmlFor="weight">Peso: (kg)</label>
+      <input id="weight" type="number"autoComplete="off"required min={40}max={160} onChange={handleInputChange} />
 
-      <label htmlFor="height">Altura:</label>
-      <input id="height" type="text"onChange={handleInputChange} />
+      <label htmlFor="height">Altura: (cm)</label>
+      <input id="height" type="number" autoComplete="off"required min={130} max={230} onChange={handleInputChange} />
 
       <label htmlFor="gender">Sexo:</label>
-      <select name="gender" id="gender" onBlur={handleSelectBlur}>
+      <select name="gender" id="gender" onBlur={handleSelectBlur} required>
         <option value="">Selecione aqui</option>
         <option value="male">Masculino</option>
         <option value="female">Feminino</option>
       </select>
 
       <label htmlFor="activityLevel">Qual seu nível de atividade física?</label>
-      <select name="activityLevel" id="activityLevel" onBlur={handleSelectBlur}>
+      <select name="activityLevel" id="activityLevel" onBlur={handleSelectBlur} required>
         <option value="">Selecione aqui</option>
         <option value="">Selecione seu nível de atividade</option>
         <option value="level_1">
@@ -72,14 +73,14 @@ export function Form() {
       </select>
 
       <label htmlFor="goals">Qual é sua meta:</label>
-      <select name="goals" id="goals" onBlur={handleSelectBlur}>
+      <select name="goals" id="goals" onBlur={handleSelectBlur} required>
         <option value="">Selecione aqui</option>
         <option value="maintain">Manter o peso</option>
         <option value="weightlose">Perder peso</option>
         <option value="weightgain">Ganhar peso</option>
       </select>
 
-      <button type="submit">Enviar</button>
+      <Button  type="submit">Enviar</Button>
     </form>
   );
 }

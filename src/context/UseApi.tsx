@@ -1,8 +1,12 @@
 import axios from "axios";
 import { toast } from "react-toastify";
 import { ReactNode, createContext, useContext, useState } from "react";
-import { ApiContextProps } from "../interfaces/IApiContextProps";
 
+interface ApiContextProps {
+  authenticated: (apiKey: string) => Promise<void>;
+  userIsAuthenticated:boolean;
+  token:string
+}
 const apiContext = createContext<ApiContextProps>({} as ApiContextProps);
 
 const API_URL = "https://fitness-calculator.p.rapidapi.com";

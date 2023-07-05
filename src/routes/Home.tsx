@@ -4,8 +4,9 @@ import { NavLink } from "../components/NavLink";
 export function Home() {
   return (
     <>
+    <NavLink />
       <Form />
-      <NavLink />
+      
     </>
   );
 }

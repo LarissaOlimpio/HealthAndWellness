@@ -1,0 +1,14 @@
+.footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  font-size: 1.1rem;
+}
+.footer img{
+  width: 30px;
+  transition: 0.3s ease-in-out;
+}
+.footer img:hover{
+  transform: scale(1.2);
+}

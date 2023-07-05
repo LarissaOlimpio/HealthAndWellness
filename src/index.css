@@ -2,6 +2,10 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  /*Para suavizar os textos:*/
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  font-family: 'Roboto', sans-serif;
 
 }
 body{
@@ -16,12 +20,30 @@ body{
   position: fixed;
   top: 0;
   right: 0;
-
   z-index: -1;
   width: 100vw;
   min-height: 100vh;
   object-fit: cover;
   background-repeat: no-repeat;
+}
+body::-webkit-scrollbar { /*corpo da barra*/
+  width: 3px;
+  height: 3px;
+}
+body::-webkit-scrollbar-track { /*trilha por onde a alça caminha*/
+  background: linear-gradient(var(--black), var(--grey));
+}
+body::-webkit-scrollbar-thumb {/*a alça propriamente*/
+  background-color: var(--grey);
+  border-radius: 20px;
+}
+
+body{
+   scrollbar-color: var(grey)  linear-gradient(var(--black), var(--grey));
+}
+h1{
+  color: #0d840d;
+  font-size: 3rem;
 }
 a{
   text-decoration: none;
@@ -32,9 +54,17 @@ ul{
 input, select{
   border-radius: 5px;
   padding: 0.5rem;
+  border-width: 1px;
+  font-size: 1rem;
   
 }
-h1{
-  color: #0d840d;
-  font-size: 3rem;
+input:focus{
+  border-color: #70a470;
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
