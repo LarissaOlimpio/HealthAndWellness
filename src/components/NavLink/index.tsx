@@ -2,6 +2,7 @@ import styles from "./NavLink.module.css";
 export function NavLink() {
   const clearDataLocalStorage = () => {
     localStorage.removeItem("apiKey");
+    localStorage.removeItem("formData")
     location.reload();
   };
 

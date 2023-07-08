@@ -4,8 +4,7 @@ import { ReactNode, createContext, useContext, useState } from "react";
 
 interface ApiContextProps {
   authenticated: (apiKey: string) => Promise<void>;
-  userIsAuthenticated:boolean;
-  token:string
+  userIsAuthenticated: boolean;
 }
 const apiContext = createContext<ApiContextProps>({} as ApiContextProps);
 
@@ -13,15 +12,12 @@ const API_URL = "https://fitness-calculator.p.rapidapi.com";
 
 export const ApiProvider = (props: { children: ReactNode }) => {
   const [userIsAuthenticated, setUserIsAuthenticated] = useState(() => {
-    if(localStorage.getItem("apiKey")){
-      return true
-    }else{
-      return false
+    if (localStorage.getItem("apiKey")) {
+      return true;
+    } else {
+      return false;
     }
- 
   });
-
-  const [token, setToken] = useState<string>("");
 
   const authenticated = async (apikey: string) => {
     let sucess = true;
@@ -35,9 +31,8 @@ export const ApiProvider = (props: { children: ReactNode }) => {
       .then((response) => {
         if (response.status == 200) {
           toast.success("usuário logado com sucesso");
-          setToken(apikey);
-          //setCookie("apikey", apikey, 7);
-          localStorage.setItem("apiKey",apikey)
+
+          localStorage.setItem("apiKey", apikey);
         }
       })
       .catch((error) => {
@@ -49,7 +44,7 @@ export const ApiProvider = (props: { children: ReactNode }) => {
     setUserIsAuthenticated(sucess);
   };
   return (
-    <apiContext.Provider value={{ authenticated, userIsAuthenticated, token }}>
+    <apiContext.Provider value={{ authenticated, userIsAuthenticated }}>
       {props.children}
     </apiContext.Provider>
   );
