@@ -4,8 +4,8 @@ import styles from "./Form.module.css";
 import { Button } from "../Button";
 import { useDispatch } from "react-redux";
 import { setFormData } from "../../redux/sliceDataUser";
-import { CalcMacroAmount } from "../CalcMacroAmount";
 
+import { useNavigate } from "react-router-dom";
 
 export function Form() {
   const [formDataUser, setFormDataUser] = useState<IFormData>({
@@ -19,11 +19,11 @@ export function Form() {
   });
 
   const dispatch = useDispatch();
-
+  const navigate = useNavigate();
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     dispatch(setFormData(formDataUser));
-    
+    navigate("/ResultsUser"), { state: { formDataUser } };
   };
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { id, value } = e.target;
@@ -94,9 +94,7 @@ export function Form() {
         required
       >
         <option value="">Selecione seu nível de atividade</option>
-        <option value="2">
-          Sedentário, pouco ou nenhuma atividade física
-        </option>
+        <option value="2">Sedentário, pouco ou nenhuma atividade física</option>
         <option value="3"> Exercício 1-3 vezes na semana</option>
         <option value="4">Exercício 4-5 vezes na semana</option>
         <option value="5">
@@ -117,7 +115,7 @@ export function Form() {
       </select>
 
       <Button type="submit">Enviar</Button>
-      <CalcMacroAmount/>
+      
     </form>
   );
 }
