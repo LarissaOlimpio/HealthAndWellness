@@ -54,29 +54,26 @@ export const CalcMacroAmount: React.FC = () => {
   return (
     <div>
       <div className={styles.containerDataUser}>
-      <div className={styles.titleDataUser}>
-        <h2>
-            Se as informações estiverem corretas clique em Calcular para obter a
-            quantidade aproximada de macro nutrientes para ser consumido diarimante
-          </h2>
-      </div>
-        <div  className={styles.dataUser}>
-          <p>Name: {formData.name}</p>
-          <p>Age: {formData.age}</p>
-          <p>Weight: {formData.weight}</p>
-          <p>Height: {formData.height}</p>
-          <p>Gender: {formData.gender}</p>
-          <p>Activity Level: {formData.activityLevel}</p>
-          <p>Goals: {formData.goals}</p>
+
+        <div className={styles.titleDataUser}>
+          <h2>Bem vindo {formData.name},</h2>
+          <p> Selecione qual informação gostaria de consultar:</p>
         </div>
-        <Button type="button" onClick={handleButtonClick}>
-          Calcular
-        </Button>
+
+        <div>
+          <p>
+            Calcular quantidade aproximada de Proteína, Carboidrato e Gordura
+          </p>
+          <Button type="button" onClick={handleButtonClick}>
+            Calcular
+          </Button>
+        </div>
+
         {results && (
-          <div>
+          <div className={styles.results}>
             <h3>
-              Para uma dieta balanceada você deverá consumir de cada macro
-              Nutriente aproximadamente:
+              Para uma dieta balanceada você deverá consumir diariamente, de cada macro
+              Nutriente a quantidade aproximada de :
             </h3>
             <p>Proteína: {results.data.balanced.protein.toFixed(2)} gr</p>
             <p>Carboidrato: {results.data.balanced.carbs.toFixed(2)} gr</p>

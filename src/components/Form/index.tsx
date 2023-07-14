@@ -35,7 +35,7 @@ export function Form() {
   };
   return (
     <form className={styles.form} onSubmit={handleSubmit}>
-      <h2>Bem vindo, antes de começar preencha os campos abaixo:</h2>
+      <h2>Antes de começar preencha os campos abaixo:</h2>
 
       <label htmlFor="name">Nome:</label>
       <input
