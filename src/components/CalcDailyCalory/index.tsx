@@ -69,15 +69,13 @@ export const CalcDailyCalory: React.FC = () =>{
   }
   const handleClick = async() =>{
     await CalcDailyCaloryAPi(formData,token)
-    if(results){
-      console.log(results.data.goals)
-    }
+    
   }
 
   return(
     <div className={styles.containerDataUser}>
       <p>Calcular quantidade aproximada de calorias que devem ser consumida diariamente</p>
-      <Button type="button" onClick={handleClick}> Calular</Button>
+      <Button type="button" onClick={handleClick}> Calcular</Button>
       {results &&(
         <>
         <div>
