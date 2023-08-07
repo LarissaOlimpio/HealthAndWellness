@@ -20,7 +20,7 @@ Health and well-being in your hands, the idea is a Web platform to help in the c
 
 **You can clone the project and run it locally by following the steps below**
 
-1. `git clone https://github.com/LarissaOlimpio/TheLastOfUs.git` for cloning the project
+1. `git clone https://github.com/LarissaOlimpio/HealthAndWellness.git` for cloning the project
 2. `yarn` ou `npm install` to install the dependency of the project
 3. `yarn start` or `npm start` to execute the project
 4. Access [http://localhost:3000](http://localhost:3000) in the browser
