@@ -5,7 +5,6 @@
 
 Health and well-being in your hands, the idea is a Web platform to help in the calculations of the ideal amount to be consumed of each macronutrient such as protein, fat, and carbohydrate, using API Fitness Calculator that makes the calculations based on data provided by the user.
 
-> Project under development
 
 | :placard: Health And Wellness |     |
 | -------------  | --- |
